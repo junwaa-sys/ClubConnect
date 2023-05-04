@@ -1,0 +1,136 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.dashboard-container {
+  max-width: 90%;
+  margin: 50 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.dashboard-welcome {
+  font-size: 5rem;
+  margin-bottom: 25px;
+}
+
+.dashboard-subscriptions-header {
+  font-size: 3rem;
+  margin: 25px 15px;
+}
+
+.dashboard-subscriptions-para {
+  font-size: 2rem;
+  margin: 32px 15px;
+  text-align: center;
+  font-weight: 400;
+}
+
+.dashboard-sub-data {
+  color: #78b29c;
+  font-weight: bold;
+}
+
+.blue-bold {
+  color: #78b29c;
+  font-weight: bold;
+}  
+
+.lds-dual-ring {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #78b29c;
+  border-color: #78b29c transparent #78b29c transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
+/* EDIT MEMBERS DRAWER CSS */
+
+.edit-member-container-form, .edit-member-container-unedited {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.edit-member-container-form label {
+  display: flex;
+  flex-basis: 100%;
+  margin-bottom: 20px;
+  font-weight: bold;
+  justify-content: space-between;
+  
+}
+.edit-member-container-form input {
+  margin-left: 16px;
+  }
+
+  .edit-member-submit {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .edit-member-info-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .edit-member-container-left{
+   font-weight: bold;
+  }
+
+  .edit-member-container-para {
+    margin-bottom: 20px;
+  }
+
+   .edit-member-sub-header {
+    margin: 20px;
+   }
+
+   .edit-member-sub-button {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+   }
+
+   /* LOGGED OUT */
+
+   .logged-out-container {
+    text-align: center;
+    padding: 60px 0;
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+
+   .logged-out-sign-in-button {
+    margin: 24px;
+    width: 90%
+   }
