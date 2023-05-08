@@ -39,7 +39,7 @@ module.exports = {
     //   afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
     // },
     client: 'pg',
-    connection: process.env.DATABASE_URL,
+    connection: { host: process.env.DATABASE_URL },
     pool: {
       min: 2,
       max: 10,
