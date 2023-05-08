@@ -38,18 +38,19 @@ module.exports = {
     // pool: {
     //   afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
     // },
-    client: 'postgresql',
+    client: 'pg',
     connection: {
       host: process.env.DATABASE_URL,
       port: process.env.PGHOST,
       database: process.env.PGDATABASE,
       user: process.env.PGUSER,
       password: process.env.PGPASSWORD,
+      ssl: false,
     },
-    pool: {
-      min: 2,
-      max: 10,
-    },
+    // pool: {
+    //   min: 2,
+    //   max: 10,
+    // },
     migrations: {
       tableName: 'knex_migrations',
     },
