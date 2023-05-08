@@ -13,6 +13,7 @@ exports.up = function (knex) {
     table.string('email')
     table.string('emergency_contact_name')
     table.string('emergency_contact_phone')
+    table.string('stripe_id ')
     table.timestamps(true, true)
   })
 }

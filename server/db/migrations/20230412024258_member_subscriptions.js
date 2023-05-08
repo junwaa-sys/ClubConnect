@@ -10,7 +10,7 @@ exports.up = function (knex) {
     table.integer('concession_qty')
     table.string('valid_from')
     table.string('valid_to')
-    table.date('renewal_date')
+    table.string('renewal_date')
     table.string('payment_reference')
     table.string('payment_status')
     table.timestamps(true, true)
