@@ -31,9 +31,17 @@ module.exports = {
 
   production: {
     client: 'sqlite3',
-    connection: {
-      filename: '/app/storage/dev.sqlite3',
-    },
     useNullAsDefault: true,
+    connection: {
+      filename: join(__dirname, 'dev.sqlite3'),
+    },
+    pool: {
+      afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
+    },
+    // client: 'sqlite3',
+    // connection: {
+    //   filename: '/app/storage/dev.sqlite3',
+    // },
+    // useNullAsDefault: true,
   },
 }

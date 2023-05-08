@@ -29,10 +29,10 @@ document.addEventListener('DOMContentLoaded', () => {
       }}
     >
       <Auth0Provider
-        domain="tohora-2023-daniel.au.auth0.com"
-        clientId="1gFRX3MGnRmPTQTORzxr1e1ExtK1KROo"
+        domain="https://tohora-2023-joon.au.auth0.com"
+        clientId="OzGWR8tq0utTXDYTlGCAMC1CznH8B9By"
         redirectUri={window.location.origin}
-        audience="https://clubconnect/api"
+        audience="https://fruits/api"
       >
         <Router>
           <Provider store={store}>

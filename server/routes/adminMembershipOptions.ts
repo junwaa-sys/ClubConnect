@@ -22,6 +22,7 @@ router.post('/', checkJwt, async (req, res) => {
     const newId = await db.addSubscription(req.body)
     const newOption = { ...req.body }
     newOption.id = newId[0]
+    console.log({ newOption })
     const stripeVals = await stripe.createStripeMembershipOption(newOption)
     newOption.stripe_price = stripeVals.price.id
     newOption.stripe_product = stripeVals.product.id
