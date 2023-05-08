@@ -30,13 +30,28 @@ module.exports = {
   },
 
   production: {
-    client: 'sqlite3',
-    useNullAsDefault: true,
+    // client: 'sqlite3',
+    // useNullAsDefault: true,
+    // connection: {
+    //   filename: join(__dirname, 'dev.sqlite3'),
+    // },
+    // pool: {
+    //   afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
+    // },
+    client: 'postgresql',
     connection: {
-      filename: join(__dirname, 'dev.sqlite3'),
+      host: process.env.DATABASE_URL,
+      port: process.env.PGHOST,
+      database: process.env.PGDATABASE,
+      user: process.env.PGUSER,
+      password: process.env.PGPASSWORD,
     },
     pool: {
-      afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
+      min: 2,
+      max: 10,
+    },
+    migrations: {
+      tableName: 'knex_migrations',
     },
     // client: 'sqlite3',
     // connection: {
