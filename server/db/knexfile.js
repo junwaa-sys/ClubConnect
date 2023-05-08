@@ -38,7 +38,7 @@ module.exports = {
     // pool: {
     //   afterCreate: (conn, cb) => conn.run('PRAGMA foreign_keys = ON', cb),
     // },
-    client: 'pg',
+    client: 'Postgres',
     connection: {
       host: process.env.DATABASE_URL,
       port: process.env.PGHOST,

@@ -120,6 +120,7 @@
     "knex": "^2.3.0",
     "moment-timezone": "^0.5.43",
     "pg": "^8.8.0",
+    "psql": "^0.0.1",
     "react-payment-inputs": "^1.1.9",
     "sqlite3": "^5.1.2",
     "stripe": "^12.1.1",
