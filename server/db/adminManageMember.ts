@@ -10,9 +10,9 @@ function getMemberList(db = connection): Promise<models.MemberList[]> {
     .with(
       'valid_subscription',
       db.raw(
-        `select *,CAST(SUBSTR("valid_to",1,4) AS INTEGER) as year , 
-        CAST(SUBSTR("valid_to",6,2) AS INTEGER) as month, 
-        CAST(SUBSTR("valid_to",9,2) AS INTEGER) as day 
+        `select *,CAST(SUBSTR("valid_to",1,4) AS int) as year , 
+        CAST(SUBSTR("valid_to",6,2) AS int) as month, 
+        CAST(SUBSTR("valid_to",9,2) AS int) as day 
         from "member_subscriptions" 
         where payment_status = "paid"  and concession_qty > 0 and year >= ${currenDate.getFullYear()} and month >= ${
           currenDate.getMonth() + 1

@@ -41,7 +41,7 @@ export async function getMembersSubscriptionById(
       'member_profiles.email as memberEmail',
       'member_profiles.stripe_id as stripeId'
     )
-    .where('member_profiles.auth0_id', 'google-oauth2|105121944184778286463')
+    .where('member_profiles.auth0_id', id)
     .orWhere('member_profiles.stripe_id', id)
     .first()
 }
